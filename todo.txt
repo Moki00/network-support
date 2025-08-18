@@ -1,0 +1,37 @@
+#1
+Before any network scan,
+Inform the client about the network scan:
+"standard diagnostic procedure to understand the network's state"
+Get explicit permission to continue.
+
+#2
+connect to the network,
+run an Nmap scan.
+This will give a complete picture of all the devices and services currently running.
+Save the output directly to a file for later analysis and documentation.
+
+nmap 192.168.254.0/24 -oN baseline_scan.txt
+nmap -T4 192.168.254.0/24 -oN baseline_scan.txt
+creates a file named baseline_scan.txt with all the scan results.
+
+#3
+Use the baseline_scan.txt file to identify the devices on the network.
+Look for any unknown devices, unexpected open ports, or services that are not running correctly.
+
+#4
+identify problems,
+apply troubleshooting steps.
+This could involve configuring a new port forwarding rule,
+updating a device's firmware, or changing a DNS setting.
+
+#5
+After changes,
+run a second scan to verify fixes
+
+nmap 192.168.254.0/24 -oN final_scan.txt
+Compare the baseline_scan.txt to the final_scan.txt.
+
+#6
+show the client the "before" and "after" to demonstrate the problem is fixed,
+and that the network is now working as expected
+prove the value of this work!

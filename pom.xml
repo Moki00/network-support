@@ -12,7 +12,6 @@
         <maven.compiler.target>21</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <mainClass>com.networksupport.app.Main</mainClass>
-        <jsch.version>2.27.2</jsch.version>
         <maven.compiler.plugin.version>3.13.0</maven.compiler.plugin.version>
         <maven.assembly.plugin.version>3.7.1</maven.assembly.plugin.version>
         <finalName>network-support</finalName>
@@ -23,7 +22,7 @@
         <dependency>
             <groupId>com.github.mwiede</groupId>
             <artifactId>jsch</artifactId>
-            <version>${jsch.version}</version>
+            <version>0.2.14</version>
         </dependency>
         <!-- Logging -->
         <dependency>

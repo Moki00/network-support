@@ -1,0 +1,9 @@
+Find the active hosts,
+save them to hosts.txt
+
+nmap -sn 192.168.254.0/24 -oG - | awk '/Up$/{print $2}' > hosts.txt
+edit ip when necessary
+
+Run the fast port scan on the list of hosts,
+save to baseline.txt
+nmap -T4 -iL hosts.txt -oN baseline.txt
